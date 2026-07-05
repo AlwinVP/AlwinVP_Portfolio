@@ -13,7 +13,7 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="lg:col-span-3"
         >
-          <p className="text-lg leading-relaxed text-muted-foreground">
+          <p className="text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
             {about.summary}
           </p>
           <div className="mt-8 flex flex-wrap gap-2">

@@ -27,7 +27,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
             </span>
-            Available for opportunities
+            Open to Software Engineering Opportunities
           </span>
 
           <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight text-secondary md:text-7xl">
@@ -36,9 +36,11 @@ export function Hero() {
             I'm <span className="text-brand">{profile.name}</span>
           </h1>
 
-          <p className="mt-6 text-2xl font-semibold text-secondary md:text-3xl">
-            {profile.role}
-          </p>
+          <div className="mt-6 text-2xl font-semibold text-secondary md:text-3xl flex flex-col gap-1">
+            {profile.role.split("\n").map((r) => (
+              <span key={r}>{r}</span>
+            ))}
+          </div>
           <p className="mt-1 text-lg text-muted-foreground">{profile.subRole}</p>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -109,9 +111,10 @@ export function Hero() {
             className="absolute -left-4 bottom-8 rounded-2xl border border-border bg-card px-4 py-3 shadow-lg"
           >
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Currently
+              Enthusiast
             </p>
-            <p className="text-sm font-bold text-secondary">Shipping AR/VR&nbsp;</p>
+            <p className="text-sm font-bold text-secondary">Immersive Tech Enthusiast</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Crafting interactive games & web apps</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}

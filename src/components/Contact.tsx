@@ -27,8 +27,8 @@ export function Contact() {
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
     { icon: Phone, label: "Phone", value: profile.phone, href: `tel:${profile.phone}` },
     { icon: MapPin, label: "Location", value: profile.location },
-    { icon: FaLinkedin, label: "LinkedIn", value: "linkedin.com/in/alwinvp", href: profile.linkedin },
-    { icon: FaGithub, label: "GitHub", value: "github.com/alwinvp", href: profile.github },
+    { icon: FaLinkedin, label: "LinkedIn", value: profile.linkedin.replace("https://www.", "").replace("https://", ""), href: profile.linkedin },
+    { icon: FaGithub, label: "GitHub", value: profile.github.replace("https://www.", "").replace("https://", ""), href: profile.github },
   ];
 
   return (
@@ -41,6 +41,25 @@ export function Contact() {
           className="rounded-3xl bg-secondary p-8 text-secondary-foreground lg:col-span-2"
         >
           <h3 className="text-2xl font-bold">Get in touch</h3>
+          <p className="mt-3 text-sm font-semibold opacity-90">
+            Currently open to opportunities as:
+          </p>
+          <div className="mt-2.5 mb-4 flex flex-wrap gap-1.5">
+            {[
+              "Software Engineer",
+              "Unity Developer",
+              "Game Developer",
+              "React Frontend Developer",
+              "AR/VR Developer",
+            ].map((role) => (
+              <span
+                key={role}
+                className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white/95"
+              >
+                {role}
+              </span>
+            ))}
+          </div>
           <p className="mt-2 text-sm opacity-70">
             Have a project in mind or just want to say hi? My inbox is always open.
           </p>

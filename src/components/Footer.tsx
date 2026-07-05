@@ -9,9 +9,7 @@ export function Footer() {
         <p className="text-sm text-muted-foreground">
           © 2026 {profile.name}. All rights reserved.
         </p>
-        <p className="text-xs text-muted-foreground">
-          Built with <span className="font-semibold text-secondary">React + Tailwind + Framer Motion</span>
-        </p>
+
         <div className="flex items-center gap-2">
           {[
             { Icon: FaGithub, href: profile.github, label: "GitHub" },
