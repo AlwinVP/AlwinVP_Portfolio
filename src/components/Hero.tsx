@@ -31,7 +31,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight text-secondary md:text-7xl">
-            Hello <span className="inline-block">👋</span>
+            Hello
             <br />
             I'm <span className="text-brand">{profile.name}</span>
           </h1>
@@ -111,7 +111,7 @@ export function Hero() {
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Currently
             </p>
-            <p className="text-sm font-bold text-secondary">Shipping AR/VR ✨</p>
+            <p className="text-sm font-bold text-secondary">Shipping AR/VR&nbsp;</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
