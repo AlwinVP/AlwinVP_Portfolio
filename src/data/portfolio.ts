@@ -1,6 +1,6 @@
 import {
   SiPython, SiJavascript, SiC, SiReact, SiFlutter, SiFirebase, SiUnity,
-  SiFlask, SiGit, SiGithub, SiBlender, SiFigma, SiAdobephotoshop,
+  SiFlask, SiGit, SiGithub, SiBlender, SiFigma, SiAdobephotoshopclassic,
   SiAndroidstudio, SiOpenjdk, SiSharp,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -70,7 +70,7 @@ export const techStack: { category: string; items: Tech[] }[] = [
       { name: "GitHub", icon: SiGithub },
       { name: "Blender", icon: SiBlender },
       { name: "Figma", icon: SiFigma },
-      { name: "Photoshop", icon: SiAdobephotoshop },
+      { name: "Photoshop", icon: SiAdobephotoshopclassic },
       { name: "Android Studio", icon: SiAndroidstudio },
       { name: "Unity VCS", icon: SiUnity },
     ],
