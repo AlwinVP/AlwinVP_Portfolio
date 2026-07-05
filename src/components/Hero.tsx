@@ -105,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="hidden md:block relative mx-auto w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-[480px]"
+          className="hidden md:block relative mx-auto w-full max-w-[360px] md:max-w-[440px] lg:max-w-[540px] xl:max-w-[600px]"
         >
           <div className="relative aspect-square w-full flex items-end justify-center select-none">
             {/* Ambient glow behind */}
