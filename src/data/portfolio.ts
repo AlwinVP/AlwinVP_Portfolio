@@ -19,6 +19,7 @@ export const profile = {
   github: "https://github.com/AlwinVP",
   linkedin: "https://www.linkedin.com/in/alwin-vadakkan",
   resume: "/AlwinVP_CV.pdf",
+  web3formsKey: "5ada1831-1bb9-42d8-9e28-9ae9e5062b8d"
 };
 
 export const about = {
@@ -96,7 +97,7 @@ export const projects = [
     description:
       "An Augmented Reality learning platform developed using Unity, Vuforia, Blender, Python, and Firebase that transforms textbook concepts into interactive 3D learning experiences.",
     tech: ["Unity", "Vuforia", "Blender", "Python", "Firebase"],
-    github: "https://github.com/alwinvp/arivu",
+    github: "https://github.com/AlwinVP/ARivu_Code",
     demo: "",
   },
   {
@@ -104,7 +105,7 @@ export const projects = [
     description:
       "A Unity + Flutter based AR communication platform that integrates AI-powered emotion recognition to render real-time interactive AR avatars during video calls.",
     tech: ["Unity", "Flutter", "Python", "AR Foundation", "Firebase"],
-    github: "https://github.com/alwinvp/holohola",
+    github: "https://github.com/Harinim004/Holohola",
     demo: "",
   },
   {
@@ -112,7 +113,7 @@ export const projects = [
     description:
       "A Unity-based VR game developed during the TinkerHub Useless Projects Hackathon featuring immersive gameplay, physics interactions, and engaging user experiences.",
     tech: ["Unity", "VR", "C#", "Blender"],
-    github: "https://github.com/alwinvp/purrsistance",
+    github: "https://github.com/AlwinVP/uselessproject2.0_Purr-sistence-Hunter",
     demo: "",
   },
   {
@@ -120,7 +121,7 @@ export const projects = [
     description:
       "An Augmented Reality treasure hunt game developed using Unity and AR Foundation where players discover clues through image tracking and interactive 3D experiences.",
     tech: ["Unity", "AR Foundation", "ARCore", "Firebase"],
-    github: "https://github.com/alwinvp/metahunt",
+    github: "https://drive.google.com/drive/folders/10-kOROyti8C-iukQti5aUM8FrajTzS8w",
     demo: "",
   },
   {
@@ -128,15 +129,15 @@ export const projects = [
     description:
       "Official event website developed using HTML, CSS, JavaScript, and Flutter Web with responsive design, registration, and live event updates.",
     tech: ["HTML", "CSS", "JavaScript", "Flutter Web", "Firebase"],
-    github: "https://github.com/alwinvp/endora",
-    demo: "https://endora.example.com",
+    github: "https://github.com/AlwinVP/Endora",
+    demo: "",
   },
   {
     title: "Same Pinch",
     description:
       "A social photo-sharing platform that allows users to upload, share, and interact with photos while providing authentication and responsive user interfaces.",
     tech: ["HTML", "CSS", "JavaScript", "PHP"],
-    github: "https://github.com/alwinvp/same-pinch",
+    github: "https://github.com/AlwinVP/Same-Pinch",
     demo: "",
   },
 ];
@@ -180,7 +181,7 @@ export const experience = [
     title: "Multidomain Intern",
     place: "Tamizhan Skills RISE Internship",
     period: "2024",
-    detail: "Worked on AR/VR, Web Development, Database, Flutter, and Software Development projects while being recognized as one of the top performers.",
+    detail: "Worked on AR/VR, Web Development, Database, Flutter, and Software Development projects while being recognized as the top performer in AR/VR in India.",
   },
   {
     title: "VR / AR Development Intern",

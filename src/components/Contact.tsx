@@ -14,13 +14,41 @@ type Detail = {
 };
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    (e.currentTarget as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 4000);
+    setIsSubmitting(true);
+    setError(false);
+    setSent(false);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", profile.web3formsKey);
+
+    // Reset the input fields immediately so the form clears in the moment
+    form.reset();
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSent(true);
+        setError(false);
+        setTimeout(() => setSent(false), 5000);
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      setError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const details: Detail[] = [
@@ -127,12 +155,21 @@ export function Contact() {
             />
           </div>
           <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: isSubmitting ? 1.0 : 1.02 }}
+            whileTap={{ scale: isSubmitting ? 1.0 : 0.98 }}
             type="submit"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-brand-foreground shadow-lg shadow-brand/25 transition-shadow hover:shadow-xl hover:shadow-brand/40 sm:w-auto"
+            disabled={isSubmitting}
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-brand-foreground shadow-lg shadow-brand/25 transition-shadow hover:shadow-xl hover:shadow-brand/40 sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            {sent ? (
+            {isSubmitting ? (
+              <>
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-brand-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Sending...
+              </>
+            ) : sent ? (
               <>
                 <Check size={18} /> Message sent
               </>
@@ -144,7 +181,12 @@ export function Contact() {
           </motion.button>
           {sent && (
             <p className="mt-3 text-sm font-medium text-brand">
-              Thanks! I'll get back to you as soon as I can.
+              Thanks! Your message has been sent successfully. I'll get back to you soon.
+            </p>
+          )}
+          {error && !sent && (
+            <p className="mt-3 text-sm font-medium text-destructive">
+              Oops! Something went wrong. Please check if your Web3Forms access key is correct.
             </p>
           )}
         </motion.form>

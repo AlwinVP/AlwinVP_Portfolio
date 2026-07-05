@@ -22,22 +22,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
-            </span>
-            Open to Software Engineering Opportunities
-          </span>
-
-          <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight text-secondary md:text-7xl">
+          <h1 className="mt-0 text-5xl font-black leading-[1.05] tracking-tight text-secondary md:text-7xl">
             Hello
             <br />
             I'm <span className="text-brand">{profile.name}</span>
           </h1>
 
           {/* Mobile-only profile photo container */}
-          <div className="block md:hidden relative mx-auto w-full max-w-[280px] sm:max-w-sm my-8">
+          <div className="block md:hidden relative mx-auto w-full max-w-[320px] sm:max-w-sm my-8">
             <div className="relative aspect-square w-full flex items-end justify-center select-none">
               {/* Ambient glow behind */}
               <div className="absolute inset-8 -z-20 rounded-full bg-brand/35 blur-2xl animate-pulse" />
@@ -55,19 +47,6 @@ export function Hero() {
               />
             </div>
 
-            <div className="absolute -left-3 bottom-4 z-20 scale-90 origin-bottom-left rounded-2xl border border-border bg-card px-4 py-3 shadow-lg">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                Enthusiast
-              </p>
-              <p className="text-sm font-bold text-secondary">Immersive Tech Enthusiast</p>
-              <p className="text-xs text-muted-foreground mt-0.5">Crafting interactive games & web apps</p>
-            </div>
-            <div className="absolute -right-3 top-4 z-20 scale-90 origin-top-right rounded-2xl border border-border bg-secondary px-4 py-3 text-secondary-foreground shadow-lg">
-              <p className="text-xs font-medium uppercase tracking-wider opacity-60">
-                Based in
-              </p>
-              <p className="text-sm font-bold">{profile.location}</p>
-            </div>
           </div>
 
           <div className="mt-6 text-2xl font-semibold text-secondary md:text-3xl flex flex-col gap-1">
@@ -126,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="hidden md:block relative mx-auto w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-[480px]"
+          className="hidden md:block relative mx-auto w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-[480px]"
         >
           <div className="relative aspect-square w-full flex items-end justify-center select-none">
             {/* Ambient glow behind */}
