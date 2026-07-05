@@ -88,8 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Alwin V P — AR/VR Developer" },
       {
         property: "og:description",
-        content:
-          "Immersive AR/VR experiences, scalable web apps, and innovative digital products.",
+        content: "Immersive AR/VR experiences, scalable web apps, and innovative digital products.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
