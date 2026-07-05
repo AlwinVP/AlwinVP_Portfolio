@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Download, ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { Download, ArrowRight, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profilePic from "@/assets/profile.jpg";
 import { profile } from "@/data/portfolio";
 
@@ -66,8 +67,8 @@ export function Hero() {
 
           <div className="mt-8 flex items-center gap-3">
             {[
-              { icon: Github, href: profile.github, label: "GitHub" },
-              { icon: Linkedin, href: profile.linkedin, label: "LinkedIn" },
+              { icon: FaGithub, href: profile.github, label: "GitHub" },
+              { icon: FaLinkedin, href: profile.linkedin, label: "LinkedIn" },
               { icon: Mail, href: `mailto:${profile.email}`, label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
