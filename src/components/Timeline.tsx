@@ -29,12 +29,8 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
                   <p className="text-xs font-semibold uppercase tracking-wider text-brand">
                     {item.period}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold text-secondary">
-                    {item.title}
-                  </h3>
-                  <p className="mt-0.5 text-sm font-medium text-muted-foreground">
-                    {item.place}
-                  </p>
+                  <h3 className="mt-1 text-lg font-bold text-secondary">{item.title}</h3>
+                  <p className="mt-0.5 text-sm font-medium text-muted-foreground">{item.place}</p>
                   {item.detail && (
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                       {item.detail}

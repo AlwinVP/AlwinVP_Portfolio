@@ -9,10 +9,7 @@ export function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28"
-    >
+    <section id="home" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-brand/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-secondary/5 blur-3xl" />
 
@@ -46,7 +43,6 @@ export function Hero() {
                 className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_15px_30px_oklch(0.68_0.2_40_/_0.3)]"
               />
             </div>
-
           </div>
 
           <div className="mt-6 text-2xl font-semibold text-secondary md:text-3xl flex flex-col gap-1">
@@ -134,7 +130,9 @@ export function Hero() {
               Enthusiast
             </p>
             <p className="text-sm font-bold text-secondary">Immersive Tech Enthusiast</p>
-            <p className="text-xs text-muted-foreground mt-0.5">Crafting interactive games & web apps</p>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              Crafting interactive games & web apps
+            </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -142,9 +140,7 @@ export function Hero() {
             transition={{ delay: 0.8 }}
             className="absolute -right-3 top-4 sm:-right-2 sm:top-10 z-20 scale-90 sm:scale-100 origin-top-right rounded-2xl border border-border bg-secondary px-4 py-3 text-secondary-foreground shadow-lg"
           >
-            <p className="text-xs font-medium uppercase tracking-wider opacity-60">
-              Based in
-            </p>
+            <p className="text-xs font-medium uppercase tracking-wider opacity-60">Based in</p>
             <p className="text-sm font-bold">{profile.location}</p>
           </motion.div>
         </motion.div>

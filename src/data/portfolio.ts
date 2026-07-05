@@ -1,7 +1,22 @@
 import {
-  SiPython, SiJavascript, SiReact, SiFlutter, SiFirebase, SiUnity,
-  SiFlask, SiGit, SiGithub, SiBlender, SiFigma,
-  SiAndroidstudio, SiSharp, SiHtml5, SiCss, SiTailwindcss, SiPhp, SiGamedeveloper
+  SiPython,
+  SiJavascript,
+  SiReact,
+  SiFlutter,
+  SiFirebase,
+  SiUnity,
+  SiFlask,
+  SiGit,
+  SiGithub,
+  SiBlender,
+  SiFigma,
+  SiAndroidstudio,
+  SiSharp,
+  SiHtml5,
+  SiCss,
+  SiTailwindcss,
+  SiPhp,
+  SiGamedeveloper,
 } from "react-icons/si";
 import { DiPhotoshop } from "react-icons/di";
 import type { IconType } from "react-icons";
@@ -19,7 +34,7 @@ export const profile = {
   github: "https://github.com/AlwinVP",
   linkedin: "https://www.linkedin.com/in/alwin-vadakkan",
   resume: "/AlwinVP_CV.pdf",
-  web3formsKey: "5ada1831-1bb9-42d8-9e28-9ae9e5062b8d"
+  web3formsKey: "5ada1831-1bb9-42d8-9e28-9ae9e5062b8d",
 };
 
 export const about = {
@@ -175,30 +190,35 @@ export const experience = [
     title: "React Frontend Developer Intern",
     place: "IntPurple",
     period: "Currently",
-    detail: "Working on ReactJS frontend development, reusable UI components, REST API integration, responsive interfaces, and Git-based collaborative development.",
+    detail:
+      "Working on ReactJS frontend development, reusable UI components, REST API integration, responsive interfaces, and Git-based collaborative development.",
   },
   {
     title: "Multidomain Intern",
     place: "Tamizhan Skills RISE Internship",
     period: "2024",
-    detail: "Worked on AR/VR, Web Development, Database, Flutter, and Software Development projects while being recognized as the top performer in AR/VR in India.",
+    detail:
+      "Worked on AR/VR, Web Development, Database, Flutter, and Software Development projects while being recognized as the top performer in AR/VR in India.",
   },
   {
     title: "VR / AR Development Intern",
     place: "IEEE Malabar Subsection Internship",
     period: "2024",
-    detail: "Developed immersive Unity applications and gained practical experience in XR workflows and AR/VR technologies.",
+    detail:
+      "Developed immersive Unity applications and gained practical experience in XR workflows and AR/VR technologies.",
   },
   {
     title: "Team Lead & Flutter Developer",
     place: "TechPulse Hackathon",
     period: "2024",
-    detail: "Developed Raksha, a real-time emergency communication application using Flutter and Firebase for disaster situations.",
+    detail:
+      "Developed Raksha, a real-time emergency communication application using Flutter and Firebase for disaster situations.",
   },
   {
     title: "Lead Unity Developer",
     place: "MHM'24",
     period: "2024",
-    detail: "Developed and coordinated an AR Treasure Hunt using Unity, AR Foundation, image tracking, and interactive 3D content.",
+    detail:
+      "Developed and coordinated an AR Treasure Hunt using Unity, AR Foundation, image tracking, and interactive 3D content.",
   },
 ];
