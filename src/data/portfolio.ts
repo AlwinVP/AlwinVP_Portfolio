@@ -18,7 +18,7 @@ export const profile = {
   location: "Thrissur, Kerala, India",
   github: "https://github.com/AlwinVP",
   linkedin: "https://www.linkedin.com/in/alwin-vadakkan",
-  resume: "/resume.pdf",
+  resume: "/AlwinVP_CV.pdf",
 };
 
 export const about = {

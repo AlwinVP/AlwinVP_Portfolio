@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, ArrowRight, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import profilePic from "@/assets/profile.jpg";
+import profilePic from "@/assets/profile.png";
 import { profile } from "@/data/portfolio";
 
 export function Hero() {
@@ -35,6 +35,40 @@ export function Hero() {
             <br />
             I'm <span className="text-brand">{profile.name}</span>
           </h1>
+
+          {/* Mobile-only profile photo container */}
+          <div className="block md:hidden relative mx-auto w-full max-w-[280px] sm:max-w-sm my-8">
+            <div className="relative aspect-square w-full flex items-end justify-center select-none">
+              {/* Ambient glow behind */}
+              <div className="absolute inset-8 -z-20 rounded-full bg-brand/35 blur-2xl animate-pulse" />
+
+              {/* Circular background frame */}
+              <div className="absolute inset-12 -z-10 rounded-full border-8 border-card bg-gradient-to-tr from-brand/95 to-brand/35 shadow-2xl" />
+
+              {/* Pop-out cutout image */}
+              <img
+                src={profilePic}
+                alt={profile.name}
+                width={768}
+                height={768}
+                className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_15px_30px_oklch(0.68_0.2_40_/_0.3)]"
+              />
+            </div>
+
+            <div className="absolute -left-3 bottom-4 z-20 scale-90 origin-bottom-left rounded-2xl border border-border bg-card px-4 py-3 shadow-lg">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Enthusiast
+              </p>
+              <p className="text-sm font-bold text-secondary">Immersive Tech Enthusiast</p>
+              <p className="text-xs text-muted-foreground mt-0.5">Crafting interactive games & web apps</p>
+            </div>
+            <div className="absolute -right-3 top-4 z-20 scale-90 origin-top-right rounded-2xl border border-border bg-secondary px-4 py-3 text-secondary-foreground shadow-lg">
+              <p className="text-xs font-medium uppercase tracking-wider opacity-60">
+                Based in
+              </p>
+              <p className="text-sm font-bold">{profile.location}</p>
+            </div>
+          </div>
 
           <div className="mt-6 text-2xl font-semibold text-secondary md:text-3xl flex flex-col gap-1">
             {profile.role.split("\n").map((r) => (
@@ -92,23 +126,30 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="relative mx-auto w-full max-w-md"
+          className="hidden md:block relative mx-auto w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-[480px]"
         >
-          <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 rounded-full bg-brand" />
-          <div className="relative overflow-hidden rounded-full border-8 border-card bg-card shadow-2xl">
+          <div className="relative aspect-square w-full flex items-end justify-center select-none">
+            {/* Ambient glow behind */}
+            <div className="absolute inset-8 -z-20 rounded-full bg-brand/35 blur-2xl animate-pulse" />
+
+            {/* Circular background frame */}
+            <div className="absolute inset-12 -z-10 rounded-full border-8 border-card bg-gradient-to-tr from-brand/95 to-brand/35 shadow-2xl" />
+
+            {/* Pop-out cutout image */}
             <img
               src={profilePic}
               alt={profile.name}
               width={768}
               height={768}
-              className="aspect-square w-full object-cover"
+              className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_15px_30px_oklch(0.68_0.2_40_/_0.3)] transition-transform duration-500 hover:scale-103"
             />
           </div>
+
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="absolute -left-4 bottom-8 rounded-2xl border border-border bg-card px-4 py-3 shadow-lg"
+            className="absolute -left-3 bottom-4 sm:-left-4 sm:bottom-8 z-20 scale-90 sm:scale-100 origin-bottom-left rounded-2xl border border-border bg-card px-4 py-3 shadow-lg"
           >
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Enthusiast
@@ -120,7 +161,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="absolute -right-2 top-10 rounded-2xl border border-border bg-secondary px-4 py-3 text-secondary-foreground shadow-lg"
+            className="absolute -right-3 top-4 sm:-right-2 sm:top-10 z-20 scale-90 sm:scale-100 origin-top-right rounded-2xl border border-border bg-secondary px-4 py-3 text-secondary-foreground shadow-lg"
           >
             <p className="text-xs font-medium uppercase tracking-wider opacity-60">
               Based in
